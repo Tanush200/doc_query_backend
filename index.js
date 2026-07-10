@@ -15,7 +15,7 @@ const app = express();
 
 app.use(cors({
     origin: process.env.NODE_ENV === 'production'
-        ? 'https://doc-query-frontend-nu.vercel.app/'
+        ? 'https://doc-query-frontend-nu.vercel.app'
         : 'http://localhost:3000',
     credentials: true,
 }));
