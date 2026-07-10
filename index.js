@@ -30,7 +30,7 @@ app.use('/api/document', documentRoutes);
 app.use('/api/history', historyRoutes);
 
 // Root route — handles Render / hosting platform health check pings (HEAD / and GET /)
-app.get('/',  (req, res) => res.json({ status: 'OK', app: 'DocQuery API', version: '1.0.0' }));
+app.get('/', (req, res) => res.json({ status: 'OK', app: 'DocQuery API', version: '1.0.0' }));
 app.head('/', (req, res) => res.sendStatus(200));
 
 app.get('/api/health', (req, res) => res.json({ status: 'OK', uptime: process.uptime() }));
